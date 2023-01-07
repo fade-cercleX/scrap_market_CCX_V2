@@ -36,7 +36,9 @@ const Login = () => {
                   onChangeFormattedText={(text) => console.log(text)}
                 />
               </View>
-              <Button onPress={() => navigation.navigate("Home")}>Login</Button>
+              <Button onPress={() => navigation.navigate("Home")}>
+                Request OTP
+              </Button>
               <View style={style.row}>
                 <Text>Don't have an account? </Text>
                 <Text style={{ color: colors.primary }}>Register</Text>

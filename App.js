@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import Authenticated from "./navigation/Authenticated";
+import AppNaigation from "./navigation/AppNavigation";
+import { Provider } from "react-redux";
+import store from "./src/redux/store";
 import * as Font from "expo-font";
 import { useNetInfo } from "@react-native-community/netinfo";
-import Toast from 'react-native-toast-message'
+import Toast from "react-native-toast-message";
 
 export default function App() {
   const [fontloaded, setFontLoaded] = useState(false);
@@ -45,10 +48,12 @@ export default function App() {
     : showError("Oops Network Is Disconnected...");
 
   return (
-    <View style={{height:"100%"}} >
-      <Authenticated />
-      <Toast/>
-    </View>
+    <Provider store={store}>
+      <View style={{ height: "100%" }}>
+        <AppNaigation />
+        <Toast />
+      </View>
+    </Provider>
   );
 }
 

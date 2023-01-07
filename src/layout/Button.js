@@ -1,4 +1,4 @@
-import { View, TouchableOpacity, StyleSheet, TouchableWithoutFeedbackBase } from "react-native";
+import { View, TouchableOpacity, StyleSheet,  } from "react-native";
 import React from "react";
 import { colors } from "../styles/color";
 import { Bold } from "./Text";
