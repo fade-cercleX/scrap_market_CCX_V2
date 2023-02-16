@@ -14,6 +14,7 @@ import { useNavigation } from "@react-navigation/native";
 import { NavigationContainer } from "@react-navigation/native";
 import Home from "../Home/Home";
 import MetalsList from "../../components/marketPrice/MetalsList";
+import Header from "../../layout/Header";
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -45,6 +46,8 @@ const MarketPrice = () => {
     <View
       style={{ height: "100%", paddingHorizontal: 6, backgroundColor: "#fff" }}
     >
+      <Header />
+
       <Tab.Navigator
         screenOptions={{
           tabBarScrollEnabled: true,

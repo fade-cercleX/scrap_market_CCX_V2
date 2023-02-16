@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  View,
-  StyleSheet,
-  
-  TouchableWithoutFeedback,
-} from "react-native";
+import { View, StyleSheet, TouchableWithoutFeedback } from "react-native";
 import { Text } from "../../layout/Text";
 import TopMarketRate from "../../components/home/TopMarketRate";
 import { ScrollView } from "react-native-virtualized-view";
@@ -18,16 +13,18 @@ import { SemiBold, Bold } from "../../layout/Text";
 import { colors } from "../../styles/color";
 import { Entypo } from "react-native-vector-icons";
 import { useNavigation } from "@react-navigation/native";
+import Header from "../../layout/Header";
 
 const Home = () => {
   const navigation = useNavigation();
   return (
     <ScrollView
       showsVerticalScrollIndicator={false}
-      nestedScrollEnabled={true} 
+      nestedScrollEnabled={true}
       style={{ backgroundColor: "#fff" }}
     >
       <View style={{ marginHorizontal: 10 }}>
+        <Header />
         <Bold style={{ ...style.mt_1 }}>Let&apos;s find</Bold>
         <View style={{ ...style.row }}>
           <Bold style={{ color: colors.primary }}>Scrap&nbsp;</Bold>

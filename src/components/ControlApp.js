@@ -6,7 +6,6 @@ import Header from "../layout/Header";
 const ControlApp = () => {
   return (
       <View style={{ flex: 1 }}>
-        <Header />
         <TabBar />
       </View>
   );

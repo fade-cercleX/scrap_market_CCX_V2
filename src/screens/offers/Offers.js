@@ -5,12 +5,14 @@ import { createMaterialTopTabNavigator } from "@react-navigation/material-top-ta
 import BuyScrap from "./BuyScraps";
 import SellScrap from "./SellScraps";
 import { colors } from "../../styles/color";
+import Header from "../../layout/Header";
 
 const Tab = createMaterialTopTabNavigator();
 
 const Offers = () => {
   return (
     <View style={{ height: "100%", backgroundColor: "#fff" }}>
+      <Header />
       <Tab.Navigator
         tabBarOptions={{
           activeTintColor: "#fff",

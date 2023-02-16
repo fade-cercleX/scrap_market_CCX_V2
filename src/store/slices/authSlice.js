@@ -50,12 +50,13 @@ export const { signUpStart, signUpStep1Success, signupError } =
 
 // register user step1
 
-export const registerUser = (phoneNumber) => async (dispatch) => {
+export const registerUser = (phoneNumber,navigation) => async (dispatch) => {
   try {
     dispatch(signUpStart());
     const res = await Auth.post("/account/create/step-1", {
       phoneNumber: phoneNumber,
     });
+    navigation.navigate('ConfirmOTP')
     console.log(res.data);
     dispatch(signUpStep1Success(res.data));
   } catch (error) {
@@ -82,3 +83,21 @@ export const confirmOTP =
   };
 
 export default authSlice.reducer;
+
+
+
+// export const fetchAsyncShows = createAsyncThunk(
+//   "movies/fetchAsyncShows",
+//   async () => {
+//     const seriesText = "Friends";
+//     const response = await movieApi.get(
+//       `?apiKey=${APIKey}&s=${seriesText}&type=series`
+//     );
+//     return response.data;
+//   }
+// );
+
+// extraReducers: {
+//   [fetchAsyncMovies.pending]: () => {
+//     console.log("Pending");
+//   },}

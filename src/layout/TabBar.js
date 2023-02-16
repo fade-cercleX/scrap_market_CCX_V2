@@ -7,6 +7,7 @@ import {
 } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { useNavigation } from "@react-navigation/native";
+import MarketPrice from "../../navigation/MarketPrices";
 import Home from "../screens/Home/Home";
 import {
   Entypo,
@@ -15,9 +16,11 @@ import {
   MaterialIcons,
 } from "react-native-vector-icons";
 import { colors } from "../styles/color";
-import Offers from "../screens/offers/Offers";
-import MarketPrice from "../screens/marketPrices/MarketPrice";
+// import Offers from "../screens/offers/Offers";
+// import MarketPrice from "../screens/marketPrices/MarketPrice";
 import Credits from "../screens/credits/Credits";
+import CreditSystemStack from "../../navigation/CreditSystem";
+import OffersStack from "../../navigation/Offers";
 
 const TabBar = () => {
   const navigate = useNavigation();
@@ -58,7 +61,7 @@ const TabBar = () => {
 
         <Tab.Screen
           name="offers"
-          component={Offers}
+          component={OffersStack}
           options={{
             tabBarBadgeStyle: { backgroundColor: "#F8EFFF" },
             tabBarIcon: ({ color }) => (
@@ -80,7 +83,7 @@ const TabBar = () => {
 
         <Tab.Screen
           name="Credit"
-          component={Credits}
+          component={CreditSystemStack}
           options={{
             tabBarBadgeStyle: { backgroundColor: "#F8EFFF" },
             tabBarIcon: ({ color }) => (

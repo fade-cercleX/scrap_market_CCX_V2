@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 import Authenticated from "./navigation/Authenticated";
 import AppNaigation from "./navigation/AppNavigation";
 import { Provider } from "react-redux";
-import store from "./src/redux/store";
+import store from './src/store/store'
 import * as Font from "expo-font";
 import { useNetInfo } from "@react-native-community/netinfo";
 import Toast from "react-native-toast-message";
